@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Entry - Bus App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- firebase connect -->
+    <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyD3gHhjOJ43BaAa446nvnGf4Qm7dVgCnE8",
+    authDomain: "ranpasindu-travels.firebaseapp.com",
+    databaseURL: "https://ranpasindu-travels-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "ranpasindu-travels",
+    storageBucket: "ranpasindu-travels.firebasestorage.app",
+    messagingSenderId: "297961866445",
+    appId: "1:297961866445:web:ab3c58ecf922cd584b5584",
+    measurementId: "G-8Y1P2JCCZJ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
+
+
+</head>
+
+
+<body onload="checkAccess('user')"> <nav class="navbar">
+        <span id="welcomeUser" style="text-align: center;"><h1>Bus Entry</h1></span></br>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </nav>
+
+    <div class="container">
+        <div class="entry-card">
+            <h3>Daily Income & Expenses</h3>
+            <form id="busEntryForm">
+                <label>Driver Name</label>
+                <input type="text" id="driverName" placeholder="Enter name" required>
+
+                <hr>
+                <h4>Trip Income (LKR)</h4>
+                <div class="grid-inputs">
+                    <div><label>7:00 AM</label><input type="number" id="turn1" placeholder="0"></div>
+                    <div><label>8:00 AM</label><input type="number" id="turn2" placeholder="0"></div>
+                    <div><label>9:30 AM</label><input type="number" id="turn3" placeholder="0"></div>
+                    <div><label>2:10 PM</label><input type="number" id="turn4" placeholder="0"></div>
+                    <div><label>3:30 PM</label><input type="number" id="turn5" placeholder="0"></div>
+                    <div><label>5:10 PM</label><input type="number" id="turn6" placeholder="0"></div>
+                </div>
+
+                <hr>
+                <h4>Daily Expenses</h4>
+                <label>Fuel Cost</label>
+                <input type="number" id="fuelCost" placeholder="0">
+                
+                <label>Food/Meals</label>
+                <input type="number" id="foodCost" placeholder="0">
+
+                <label>Other Expense 1 (e.g. Wash/Service)</label>
+                <input type="number" id="other1" placeholder="0">
+
+                <label>Other Expense 2 (e.g. Repairs)</label>
+                <input type="number" id="other2" placeholder="0">
+
+                <button type="submit" class="btn">Submit Daily Report</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
