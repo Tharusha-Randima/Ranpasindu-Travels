@@ -8,32 +8,26 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- firebase connect -->
-    <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-    apiKey: "AIzaSyD3gHhjOJ43BaAa446nvnGf4Qm7dVgCnE8",
-    authDomain: "ranpasindu-travels.firebaseapp.com",
-    databaseURL: "https://ranpasindu-travels-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "ranpasindu-travels",
-    storageBucket: "ranpasindu-travels.firebasestorage.app",
-    messagingSenderId: "297961866445",
-    appId: "1:297961866445:web:ab3c58ecf922cd584b5584",
-    measurementId: "G-8Y1P2JCCZJ"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSy...",
+            authDomain: "ranpasindu-travels.firebaseapp.com",
+            databaseURL: "https://ranpasindu-travels-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "ranpasindu-travels",
+            storageBucket: "ranpasindu-travels.firebasestorage.app",
+            messagingSenderId: "297961866445",
+            appId: "1:297961866445:web:ab3c58ecf922cd584b5584",
+        }
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        // Get a reference to the database service
+        const database = firebase.database();
     </script>
-
-
 </head>
 
 
@@ -81,4 +75,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
